@@ -8,7 +8,6 @@ import sys
 PLUGIN_DIR = os.path.abspath(os.path.dirname(__file__))
 sys.path.insert(0, PLUGIN_DIR)
 sys.path.insert(0, os.path.join(PLUGIN_DIR, "lib"))
-sys.path.insert(0, os.path.join(PLUGIN_DIR, "plugin"))
 
 from plugin.plugin import GoogTranslate
 
