@@ -1,20 +1,16 @@
 # -*- coding: utf-8 -*-
-"""
-Google Translate in Flowlauncher.
-
-This plugin allows translation using Google Translate and copy it.
-"""
+"""Flow Launcher Google Translate 插件入口。"""
 
 import os
 import sys
 
-# add plugin to local PATH
-parent_folder_path = os.path.abspath(os.path.dirname(__file__))
-sys.path.append(parent_folder_path)
-sys.path.append(os.path.join(parent_folder_path, 'lib'))
-sys.path.append(os.path.join(parent_folder_path, 'plugin'))
+# 将插件目录添加到 Python 路径
+PLUGIN_DIR = os.path.abspath(os.path.dirname(__file__))
+sys.path.insert(0, PLUGIN_DIR)
+sys.path.insert(0, os.path.join(PLUGIN_DIR, "lib"))
+sys.path.insert(0, os.path.join(PLUGIN_DIR, "plugin"))
 
-from plugin.Translator import GoogTranslate
+from plugin.plugin import GoogTranslate
 
 if __name__ == "__main__":
     GoogTranslate()
